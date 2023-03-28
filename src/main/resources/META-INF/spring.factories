@@ -1,0 +1,2 @@
+org.springframework.cloud.bindings.boot.BindingsPropertiesProcessor=\
+  com.vmware.tanzu.demos.dallecool.OpenAiBindingsPropertiesProcessor

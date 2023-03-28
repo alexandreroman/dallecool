@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dallecool
+
+server:
+  port: ${PORT:8080}
+
+openai:
+  api: https://api.openai.com

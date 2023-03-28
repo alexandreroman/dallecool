@@ -1,0 +1,60 @@
+.content-container {
+    display: flex;
+    justify-content: center;
+}
+
+#repo {
+    font-size: 60%;
+    color: gray;
+    text-align: center;
+}
+
+#powered-by {
+    margin-top: 0.8em;
+    margin-right: 1em;
+}
+
+#powered-by img {
+    margin-left: 0.1em;
+}
+
+.title {
+    margin-left: 5px;
+}
+
+#loading {
+    margin-left: 5px;
+    display: none;
+}
+
+.github-fork-ribbon.right-bottom:before {
+    background-color: #333;
+}
+
+input[type=text] {
+    padding: 0.5em;
+    width: 512px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+input:disabled {
+    background: lightgray;
+    color: darkgray;
+}
+
+input[type=button] {
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#image {
+    display: none;
+    margin: 2em 0em;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+}

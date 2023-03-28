@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: openai-binding
+type: servicebinding.io/openai
+stringData:
+  type: openai
+  provider: sample
+  key: changeme
