@@ -68,7 +68,8 @@
                             <artifactId>spring-cloud-bindings</artifactId>
                         </exclude>
                     </excludes>
-                </configuration>            </plugin>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
