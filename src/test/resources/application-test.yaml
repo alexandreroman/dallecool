@@ -1,2 +1,3 @@
 openai:
   key: changeme
+  api: http://localhost:${wiremock.server.port}
