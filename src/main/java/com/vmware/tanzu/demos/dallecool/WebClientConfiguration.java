@@ -16,7 +16,6 @@
 
 package com.vmware.tanzu.demos.dallecool;
 
-import org.springframework.boot.web.reactive.function.client.WebClientCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -27,14 +26,14 @@ import reactor.netty.http.client.HttpClient;
 @Configuration
 public class WebClientConfiguration {
     @Bean
-    WebClient webClient() {
+    WebClient.Builder webClientBuilder() {
         return WebClient.builder()
-                .clientConnector(new ReactorClientHttpConnector(HttpClient.create().proxyWithSystemProperties()))
-                .build();
+                .defaultHeader(HttpHeaders.USER_AGENT, "dallecool")
+                .clientConnector(new ReactorClientHttpConnector(HttpClient.create().proxyWithSystemProperties()));
     }
 
     @Bean
-    WebClientCustomizer webClientCustomizer() {
-        return webClientBuilder -> webClientBuilder.defaultHeader(HttpHeaders.USER_AGENT, "dallecool");
+    WebClient webClient(WebClient.Builder clientBuilder) {
+        return clientBuilder.build();
     }
 }
